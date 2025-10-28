@@ -15,12 +15,10 @@
         <button type="button" onclick="toggleDarkMode()" class="mode-toggle">Toggle Dark Mode</button>
 
         <div class="input-section">
-            <input type="text" id="dareInput" placeholder="Add a Romantic Dare..."
-                onkeydown="if(event.key==='Enter'){ event.preventDefault(); addDare(); }">
+            <input type="text" id="dareInput" placeholder="Add a Romantic Dare...">
             <button type="button" onclick="addDare()">Add Dare</button>
 
-            <input type="text" id="truthInput" placeholder="Add a Sweet Truth..."
-                onkeydown="if(event.key==='Enter'){ event.preventDefault(); addTruth(); }">
+            <input type="text" id="truthInput" placeholder="Add a Sweet Truth...">
             <button type="button" onclick="addTruth()">Add Truth</button>
         </div>
 
@@ -48,8 +46,7 @@
             </h2>
             <div id="chatMessages" class="chat-messages"></div>
             <div class="chat-input">
-                <input type="text" id="chatInput" placeholder="Type a message..."
-                    onkeydown="if(event.key==='Enter'){ event.preventDefault(); sendMessage(); }">
+                <input type="text" id="chatInput" placeholder="Type a message...">
                 <button type="button" onclick="sendMessage()">Send</button>
             </div>
         </div>
