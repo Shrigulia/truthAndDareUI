@@ -104,7 +104,7 @@ button:hover {
 
 .reveal-btn {
   background: #ff4081;
-  font-size: 1.2em;
+  font-size: 1.4em;
   padding: 15px 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -301,7 +301,7 @@ body.dark-mode .message-notification {
 /* Reveal Notification */
 #revealNotification {
   font-family: initial;
-  font-size: 1.4em;
+  font-size: 1.2em;
   background: #2196f3;
   color: white;
   padding: 15px 25px;
@@ -312,7 +312,7 @@ body.dark-mode .message-notification {
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  animation: revealPopInOut 8s ease forwards;
+  animation: revealPopInOut 7s ease forwards;
   z-index: 1000;
 }
 
