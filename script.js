@@ -114,13 +114,13 @@ function setupSocketEvents() {
         setTimeout(() => {
             result.classList.add('show');
             confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
-        }, 10);
+        }, 8);
     });
 
     socket.on('revealNotification', (data) => {
         const notif = document.getElementById('revealNotification');
         notif.innerText = `${data.username} revealed: ${data.item}`;
-        showNotification('revealNotification', 15000); // ← 15 sec
+        showNotification('revealNotification', 8000); // ← 8 sec
     });
 
     socket.on('clearChat', () => {
