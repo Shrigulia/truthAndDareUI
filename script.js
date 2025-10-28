@@ -120,7 +120,7 @@ function setupSocketEvents() {
     socket.on('revealNotification', (data) => {
         const notif = document.getElementById('revealNotification');
         notif.innerText = `${data.username} revealed: ${data.item}`;
-        showNotification('revealNotification', 8000); // ← 8 sec
+        showNotification('revealNotification', 7000); // ← 8 sec
     });
 
     socket.on('clearChat', () => {
