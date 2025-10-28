@@ -304,5 +304,32 @@ function logout() {
     }
 }
 
+// === ENTER KEY FIX FOR MOBILE + LAPTOP ===
+function setupEnterKeyHandlers() {
+    const inputs = ['dareInput', 'truthInput', 'chatInput'];
+    
+    inputs.forEach(id => {
+        const input = document.getElementById(id);
+        if (!input) return;
+
+        input.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                e.stopPropagation();
+
+                if (id === 'dareInput') addDare();
+                else if (id === 'truthInput') addTruth();
+                else if (id === 'chatInput') sendMessage();
+
+                // Fix for mobile: blur + refocus
+                this.blur();
+                setTimeout(() => this.focus(), 100);
+            }
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', setupEnterKeyHandlers);
+
 // === START ===
 initApp();
