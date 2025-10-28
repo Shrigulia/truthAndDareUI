@@ -13,7 +13,7 @@ body {
 
 body.dark-mode {
   background: radial-gradient(circle at top left, #000000, #0a0a0a, #001a00);
-  color: #ccffcc;
+  color: #ffb6ff;
   transition: background 2s ease;
 }
 
@@ -40,8 +40,8 @@ h1 {
 }
 
 body.dark-mode h1 {
-  color: #00ff88;
-  text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff44;
+  color: #ff6ec7;
+  text-shadow: 0 0 10px #ff6ec7, 0 0 20px #ffb6ff;
 }
 
 h2 {
@@ -55,8 +55,8 @@ h2 {
 }
 
 body.dark-mode h2 {
-  color: #00ff88;
-  text-shadow: 0 0 8px #00ff88, 0 0 16px #00ff44;
+  color: #ff6ec7;
+  text-shadow: 0 0 8px #ff6ec7, 0 0 16px #ffb6ff;
 }
 
 .input-section {
@@ -75,10 +75,10 @@ input {
 }
 
 body.dark-mode input {
-  background: #001100;
-  border-color: #00ff88;
-  color: #ccffcc;
-  box-shadow: 0 0 8px #00ff4444;
+  background: #100010;
+  border-color: #ff6ec7;
+  color: #ffdfff;
+  box-shadow: 0 0 8px #ff6ec744;
 }
 
 button {
@@ -93,9 +93,9 @@ button {
 }
 
 body.dark-mode button {
-  background: linear-gradient(135deg, #00ff88, #004400);
-  color: #000;
-  box-shadow: 0 0 12px #00ff88;
+  background: linear-gradient(135deg, #ff6ec7, #4b004b);
+  color: #fff;
+  box-shadow: 0 0 12px #ffb6ff;
 }
 
 button:hover {
@@ -110,8 +110,8 @@ button:hover {
 }
 
 body.dark-mode .reveal-btn {
-  background: linear-gradient(135deg, #00ff88, #003300);
-  box-shadow: 0 0 20px #00ff88;
+  background: linear-gradient(135deg, #ff6ec7, #3a003a);
+  box-shadow: 0 0 20px #ffb6ff;
 }
 
 .edit-btn {
@@ -120,9 +120,9 @@ body.dark-mode .reveal-btn {
 }
 
 body.dark-mode .edit-btn {
-  background: #00ff88;
+  background: #ff6ec7;
   color: #000;
-  box-shadow: 0 0 10px #00ff88;
+  box-shadow: 0 0 10px #ffb6ff;
 }
 
 .result {
@@ -145,13 +145,9 @@ body.dark-mode .edit-btn {
 }
 
 body.dark-mode .result {
-  background: #001900;
-  color: #00ff88;
-  box-shadow: 0 0 10px #00ff88;
-}
-
-.edit-section.hidden {
-  display: none;
+  background: #150015;
+  color: #ffb6ff;
+  box-shadow: 0 0 10px #ff6ec7;
 }
 
 ul {
@@ -172,221 +168,64 @@ li {
 }
 
 body.dark-mode li {
-  background: #001a00;
-  box-shadow: 0 0 10px #00ff4433;
-}
-
-li button {
-  background: #f44336;
-  padding: 8px 15px;
-  font-size: 0.9em;
-}
-
-li button:nth-child(1) {
-  background: #2196f3;
-  margin-right: 5px;
+  background: #1a001a;
+  box-shadow: 0 0 10px #ff6ec733;
 }
 
 body.dark-mode li button {
-  background: #004400;
-  color: #00ff88;
-  box-shadow: 0 0 10px #00ff88;
+  background: #3a003a;
+  color: #ffb6ff;
+  box-shadow: 0 0 10px #ffb6ff;
 }
 
 body.dark-mode li button:nth-child(1) {
-  background: #00ff88;
+  background: #ff6ec7;
   color: #000;
-  box-shadow: 0 0 10px #00ff88;
+  box-shadow: 0 0 10px #ffb6ff;
 }
 
 /* Chat Section */
-.chat-section {
-  margin: 20px 0;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
 body.dark-mode .chat-section {
-  background: #001900;
-  box-shadow: 0 0 15px #00ff4433;
-}
-
-.chat-messages {
-  max-height: 200px;
-  overflow-y: auto;
-  margin-bottom: 10px;
-  font-family: Arial, sans-serif;
-}
-
-.chat-messages .message {
-  margin: 5px 0;
-  padding: 8px;
-  background: #f8bbd0;
-  border-radius: 5px;
-  word-wrap: break-word;
+  background: #150015;
+  box-shadow: 0 0 15px #ff6ec744;
 }
 
 body.dark-mode .chat-messages .message {
-  background: rgba(0, 255, 136, 0.1);
-  border-left: 3px solid #00ff88;
-  color: #ccffcc;
-}
-
-.chat-messages .message .username {
-  font-weight: bold;
-  color: #d81b60;
+  background: rgba(255, 182, 255, 0.1);
+  border-left: 3px solid #ff6ec7;
+  color: #ffb6ff;
 }
 
 body.dark-mode .chat-messages .message .username {
-  color: #00ff88;
-  text-shadow: 0 0 8px #00ff88;
-}
-
-.chat-input {
-  display: flex;
-  gap: 10px;
-}
-
-.chat-input input {
-  flex-grow: 1;
-  margin: 0;
-}
-
-.edit-username-btn {
-  padding: 5px 10px;
-  background: #2196f3;
-  font-size: 0.9em;
+  color: #ff6ec7;
+  text-shadow: 0 0 8px #ffb6ff;
 }
 
 body.dark-mode .edit-username-btn {
-  background: linear-gradient(135deg, #00ff88, #003300);
-  color: #000;
-  box-shadow: 0 0 10px #00ff88;
-}
-
-/* Message Notification */
-.message-notification {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #ff4081;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  animation: popInOut 2s ease forwards;
-  z-index: 1000;
+  background: linear-gradient(135deg, #ff6ec7, #3a003a);
+  color: #fff;
+  box-shadow: 0 0 10px #ffb6ff;
 }
 
 body.dark-mode .message-notification {
-  background: linear-gradient(135deg, #00ff88, #004400);
-  color: #000;
-  box-shadow: 0 0 20px #00ff88;
-}
-
-.message-notification.hidden {
-  display: none;
-}
-
-@keyframes popInOut {
-  0% { opacity: 0; transform: translate(-50%, -20px); }
-  10% { opacity: 1; transform: translate(-50%, 0); }
-  90% { opacity: 1; transform: translate(-50%, 0); }
-  100% { opacity: 0; transform: translate(-50%, -20px); }
-}
-
-/* Reveal Notification */
-#revealNotification {
-  font-family: initial;
-  font-size: 1.4em;
-  background: #2196f3;
-  color: white;
-  padding: 15px 25px;
-  width: 90%;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: revealPopInOut 8s ease forwards;
-  z-index: 1000;
+  background: linear-gradient(135deg, #ff6ec7, #3a003a);
+  color: #fff;
+  box-shadow: 0 0 20px #ffb6ff;
 }
 
 body.dark-mode #revealNotification {
-  background: linear-gradient(135deg, #00ff88, #002200);
-  box-shadow: 0 0 25px #00ff88;
-  color: #000;
-}
-
-#revealNotification.hidden {
-  display: none;
-}
-
-@keyframes revealPopInOut {
-  0% { opacity: 0; transform: translate(-50%, -20px); }
-  5% { opacity: 1; transform: translate(-50%, 0); }
-  95% { opacity: 1; transform: translate(-50%, 0); }
-  100% { opacity: 0; transform: translate(-50%, -20px); }
-}
-
-/* Mobile-friendly */
-@media (max-width: 600px) {
-  input, button { width: 90%; }
-  h1 { font-size: 2em; }
-  h2 { font-size: 1.5em; }
-  .chat-messages { max-height: 150px; }
-  .chat-input { flex-direction: column; }
-  .chat-input button { width: 100%; margin-top: 10px; }
-  .edit-username-btn { width: 100%; margin-top: 10px; }
-}
-
-/* Clear chat */
-.clear-chat-btn {
-  padding: 5px 10px;
-  background: #f44336;
-  font-size: 0.9em;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.2s;
+  background: linear-gradient(135deg, #ff6ec7, #3a003a);
+  box-shadow: 0 0 25px #ffb6ff;
+  color: #fff;
 }
 
 body.dark-mode .clear-chat-btn {
-  background: linear-gradient(135deg, #00ff88, #003300);
-  color: #000;
-  box-shadow: 0 0 10px #00ff88;
-}
-
-.clear-chat-btn:hover {
-  transform: scale(1.05);
-}
-
-/* Heart animation */
-.container::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="pink" opacity="0.3"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') repeat;
-  opacity: 0.1;
-  z-index: -1;
-  animation: float 10s infinite;
+  background: linear-gradient(135deg, #ff6ec7, #3a003a);
+  color: #fff;
+  box-shadow: 0 0 10px #ffb6ff;
 }
 
 body.dark-mode .container::before {
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2300ff88" opacity="0.15"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') repeat;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ff6ec7" opacity="0.15"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') repeat;
   opacity: 0.15;
-}
-
-@keyframes float {
-  0% { background-position: 0 0; }
-  50% { background-position: 100px 100px; }
-  100% { background-position: 0 0; }
 }
