@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoveSyncDare</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>LoveSyncDare</h1>
+        <button type="button" onclick="toggleDarkMode()" class="mode-toggle">Toggle Dark Mode</button>
+
+        <div class="input-section">
+            <input type="text" id="dareInput" placeholder="Add a Romantic Dare..."
+                onkeydown="if(event.key==='Enter'){ event.preventDefault(); addDare(); }">
+            <button type="button" onclick="addDare()">Add Dare</button>
+
+            <input type="text" id="truthInput" placeholder="Add a Sweet Truth..."
+                onkeydown="if(event.key==='Enter'){ event.preventDefault(); addTruth(); }">
+            <button type="button" onclick="addTruth()">Add Truth</button>
+        </div>
+
+        <button type="button" onclick="revealRandom()" class="reveal-btn">Reveal Surprise!</button>
+        <div id="result" class="result"></div>
+
+        <button type="button" onclick="toggleEdit()" class="edit-btn">Edit Dares/Truths</button>
+        <div id="editSection" class="edit-section hidden">
+            <h2>Your Dares</h2>
+            <ul id="dareList"></ul>
+            <h2>Your Truths</h2>
+            <ul id="truthList"></ul>
+        </div>
+
+        <!-- Chat Section ke upar daal do -->
+        <div class="logout-section">
+            <button type="button" onclick="logout()" class="logout-btn">Logout</button>
+        </div>
+
+        <!-- Chat Section -->
+        <div class="chat-section">
+            <h2>Chat
+                <button type="button" onclick="editUsername()" class="edit-username-btn">Edit Username</button>
+                <button type="button" onclick="clearChat()" class="clear-chat-btn">Clear Chat</button>
+            </h2>
+            <div id="chatMessages" class="chat-messages"></div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Type a message..."
+                    onkeydown="if(event.key==='Enter'){ event.preventDefault(); sendMessage(); }">
+                <button type="button" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+
+        <!-- Notifications -->
+        <div id="messageNotification" class="message-notification hidden">New Message Received!</div>
+        <div id="revealNotification" class="message-notification hidden">Someone revealed a surprise!</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
