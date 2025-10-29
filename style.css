@@ -366,7 +366,7 @@ body.dark-mode .clear-chat-btn {
   transform: scale(1.05);
 }
 
-/* Heart animation */
+/* Heart animation styling */
 .container::before {
   content: '';
   position: fixed;

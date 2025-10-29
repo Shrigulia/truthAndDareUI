@@ -45,7 +45,7 @@ function promptLogin() {
     connectWithAuth(id.trim(), password.trim());
 }
 
-// === CONNECT WITH FULL AUTH ===
+// === CONNECT WITH FULL AUTHentication ===
 function connectWithAuth(id, password) {
     tempPassword = password;
 
