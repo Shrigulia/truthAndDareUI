@@ -331,5 +331,20 @@ function setupEnterKeyHandlers() {
 
 document.addEventListener('DOMContentLoaded', setupEnterKeyHandlers);
 
+window.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') {
+        const auth = getAuth();
+        if (auth && auth.isLoggedIn && socket) {
+            if (!socket.connected) {
+                console.log('🔁 Tab reopened — reconnecting to server...');
+                socket.connect();
+            } else {
+                console.log('🔄 Tab reopened — refreshing data...');
+                socket.emit('requestFreshData'); // backend se latest data mangwa lo
+            }
+        }
+    }
+});
+
 // === START ===
 initApp();
