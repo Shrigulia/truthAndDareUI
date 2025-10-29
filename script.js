@@ -336,10 +336,10 @@ window.addEventListener('visibilitychange', () => {
         const auth = getAuth();
         if (auth && auth.isLoggedIn && socket) {
             if (!socket.connected) {
-                console.log('🔁 Tab reopened — reconnecting to server...');
+                // console.log('🔁 Tab reopened — reconnecting to server...');
                 socket.connect();
             } else {
-                console.log('🔄 Tab reopened — refreshing data...');
+                // console.log('🔄 Tab reopened — refreshing data...');
                 socket.emit('requestFreshData'); // backend se latest data mangwa lo
             }
         }
