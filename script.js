@@ -304,26 +304,44 @@ function logout() {
     }
 }
 
-// === ENTER KEY FIX FOR MOBILE + LAPTOP ===
+// === UNIVERSAL ENTER KEY FIX FOR LAPTOP + MOBILE ===
 function setupEnterKeyHandlers() {
     const inputs = ['dareInput', 'truthInput', 'chatInput'];
-    
+
     inputs.forEach(id => {
         const input = document.getElementById(id);
         if (!input) return;
 
         input.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter') {
+            if (e.key === 'Enter' || e.keyCode === 13) {
+                // Stop default "Next" or "Submit" behavior
                 e.preventDefault();
                 e.stopPropagation();
 
+                // Execute related function
                 if (id === 'dareInput') addDare();
                 else if (id === 'truthInput') addTruth();
                 else if (id === 'chatInput') sendMessage();
 
-                // Fix for mobile: blur + refocus
-                this.blur();
-                setTimeout(() => this.focus(), 100);
+                // 🔔 Optional: notification (if you have)
+                if (typeof showNotification === 'function') {
+                    const msgType =
+                        id === 'chatInput'
+                            ? 'Message'
+                            : id === 'dareInput'
+                            ? 'Dare'
+                            : 'Truth';
+                    showNotification(`${msgType} added successfully`);
+                }
+
+                // 🧠 Mobile keyboard fix:
+                // temporarily set input to readonly, blur, then re-enable
+                input.readOnly = true;
+                setTimeout(() => {
+                    input.blur();
+                    input.readOnly = false;
+                    setTimeout(() => input.focus(), 300);
+                }, 100);
             }
         });
     });
@@ -331,20 +349,6 @@ function setupEnterKeyHandlers() {
 
 document.addEventListener('DOMContentLoaded', setupEnterKeyHandlers);
 
-window.addEventListener('visibilitychange', () => {
-    if (document.visibilityState === 'visible') {
-        const auth = getAuth();
-        if (auth && auth.isLoggedIn && socket) {
-            if (!socket.connected) {
-                // console.log('🔁 Tab reopened — reconnecting to server...');
-                socket.connect();
-            } else {
-                // console.log('🔄 Tab reopened — refreshing data...');
-                socket.emit('requestFreshData'); // backend se latest data mangwa lo
-            }
-        }
-    }
-});
 
 // === START ===
 initApp();
